@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "730c3344-4abd-4c07-b20c-33f8bd11996a",
+		"name": "goals_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31160180"
+	},
+	"item": [
+		{
+			"name": "goal_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/goals"
+			},
+			"response": []
+		},
+		{
+			"name": "get_goals_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals?progress=0.6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals"
+					],
+					"query": [
+						{
+							"key": "progress",
+							"value": "0.6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals/3/progress?progress=0.8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals",
+						"3",
+						"progress"
+					],
+					"query": [
+						{
+							"key": "progress",
+							"value": "0.8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_goal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/goals/5"
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 6,\r\n  \"title\": \"Api_Test\",\r\n  \"due_date\": \"03.04.2023\",\r\n  \"frequency\": [\r\n    0\r\n  ],\r\n  \"progress\": 0.3,\r\n  \"archived\": false\r\n}"
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "eba4a7c1-80e2-422f-949c-bf80b8d04cf7",
+		"name": "cat_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31160180"
+	},
+	"item": [
+		{
+			"name": "get_cat_img",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://cdn2.thecatapi.com/images/alk.jpg"
+			},
+			"response": []
+		},
+		{
+			"name": "search_img_data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "DEMO-API-KEY"
+					}
+				],
+				"url": {
+					"raw": "https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thecatapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"images",
+						"search"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "med"
+						},
+						{
+							"key": "mime_types",
+							"value": "jpg"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						},
+						{
+							"key": "has_breeds",
+							"value": "true"
+						},
+						{
+							"key": "order",
+							"value": "RANDOM"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_fav",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "DEMO-API-KEY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"image_id\":\"asf2\",\n\t\"sub_id\": \"my-user-1234\"\n}"
+				},
+				"url": "https://api.thecatapi.com/v1/favourites"
+			},
+			"response": []
+		},
+		{
+			"name": "post_votes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "DEMO-API-KEY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"image_id\":\"asf2\",\n\t\"sub_id\": \"my-user-1234\",\n    \"value\":1\n}"
+				},
+				"url": "https://api.thecatapi.com/v1/votes"
+			},
+			"response": []
+		},
+		{
+			"name": "del_fav",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "DEMO-API-KEY"
+					}
+				],
+				"url": {
+					"raw": "https://api.thecatapi.com/v1/favourites/:favourite_id?",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thecatapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"favourites",
+						":favourite_id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					],
+					"variable": [
+						{
+							"key": "favourite_id",
+							"value": "232418914"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"key": "x-api-key",
+			"value": "live_z0iNG5LFAIU5A9SZj7J2hfcdLTuzKOLttMCrvjJ2aHqA8ovkUwfGW2HLisK2SA3a"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
