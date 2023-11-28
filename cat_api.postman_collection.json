@@ -9,6 +9,13 @@
 		{
 			"name": "get_cat_img",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "{{e_key}}",
+						"key": "x-api-key"
+					}
+				},
 				"method": "GET",
 				"header": [],
 				"url": "https://cdn2.thecatapi.com/images/alk.jpg"
@@ -18,6 +25,13 @@
 		{
 			"name": "search_img_data",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "{{e_key}}",
+						"key": "x-api-key"
+					}
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -79,6 +93,13 @@
 		{
 			"name": "post_fav",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "{{e_key}}",
+						"key": "x-api-key"
+					}
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -101,6 +122,13 @@
 		{
 			"name": "post_votes",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "{{e_key}}",
+						"key": "x-api-key"
+					}
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -123,6 +151,13 @@
 		{
 			"name": "del_fav",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "{{e_key}}",
+						"key": "x-api-key"
+					}
+				},
 				"method": "DELETE",
 				"header": [
 					{
